@@ -8,7 +8,7 @@ Approximate images using quadtree i.e. by recursively subdividing the image into
 2. Run the code: ```python3 main.py <input_image> -o <outpput_image>``` <br/>
 Example ```python3 main.py test.jpeg -o result.png``` <br/>
 
-![Image](./test.jpeg)
+![Image](./test.jpeg=100x)
 
 
 You can set the threshold with the flag *--epsilon*. Other flags are available and listed by running ```python3 main.py --help```.
