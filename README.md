@@ -11,11 +11,11 @@ Example ```python3 main.py test.jpeg -e 35 -o result.png``` and the result for d
 
 
 <p float="middle">
-  <img src="./test.jpeg" width="250" />
-  <img src="./epsilon50.png" width="250" />
+  <img src="./images/test.jpeg" width="250" />
+  <img src="./images/epsilon50.png" width="250" />
   <br>
-  <img src="./epsilon35.png" width="250" />
-  <img src="./epsilon20.png" width="250" />
+  <img src="./images/epsilon35.png" width="250" />
+  <img src="./images/epsilon20.png" width="250" />
 </p>
 
 Other parameters are listed by running ```python3 main.py --help```.
