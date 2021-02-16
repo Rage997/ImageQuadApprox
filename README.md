@@ -8,10 +8,11 @@ Approximate images using quadtree i.e. by recursively subdividing the image into
 2. Run the code: ```python3 main.py <input_image> -o <outpput_image>``` <br/>
 Example ```python3 main.py test.jpeg -o result.png``` <br/>
 
-![Image](./test.jpeg =100x)
 
-<p float="left">
+<p float="middle">
   <img src="./test.jpeg" width="100" />
+  <img src="./test.jpeg" width="100" />
+  <br>
   <img src="./test.jpeg" width="100" />
   <img src="./test.jpeg" width="100" />
 </p>
