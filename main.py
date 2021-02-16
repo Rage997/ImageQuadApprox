@@ -1,20 +1,19 @@
-import PIL
-from PIL import Image
-import argparse
-import numpy as np
+import click
+from imageQuadTree import ImageQuad
 
-parser = argparse.ArgumentParser(description='A python script to approximate an image using QuadTree')
-parser.add_argument( 'img_path', action = 'store', type = str, help = 'The image to process.' )
-args = parser.parse_args( )
-img_path = args.img_path
-
-
-img = Image.open(img_path)
-# img.show()
-pix = np.array(img) 
+@click.command()
+@click.argument('filename')
+@click.option('-e', '--epsilon', default=10, help='Threshold wheter to split a quadtree or not.')
+@click.option('-o', '--output', default=None, help='Output file')
+@click.option('-l', '--line', is_flag=True, help='Outline for each quadrant box')
 
 
+def main(filename, epsilon, output, line):
+    quadart = ImageQuad(filename, epsilon=epsilon, draw_outine=line)
+    quadart.generate()
+    # quadart.save(output)
+    if output:
+        quadart.save(output)
 
-# References
-# 1) https://medium.com/analytics-vidhya/transform-an-image-into-a-quadtree-39b3aa6e019a
-# 2) https://estebanhufstedler.com/2020/05/05/image-quadrangulation/
+if __name__ == '__main__':
+    main()
