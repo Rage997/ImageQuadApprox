@@ -10,6 +10,11 @@ Example ```python3 main.py test.jpeg -o result.png``` <br/>
 
 ![Image](./test.jpeg =100x)
 
+<p float="left">
+  <img src="./test.jpeg" width="100" />
+  <img src="./test.jpeg" width="100" />
+  <img src="./test.jpeg" width="100" />
+</p>
 
 You can set the threshold with the flag *--epsilon*. Other flags are available and listed by running ```python3 main.py --help```.
 
