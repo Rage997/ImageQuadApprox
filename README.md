@@ -6,6 +6,11 @@ Approximate images using quadtree i.e. by recursively subdividing the image into
 1. https://estebanhufstedler.com/2020/05/05/image-quadrangulation/
 2. https://ieeexplore.ieee.org/document/544569
 
-# TODO
-[ ] Solve bug when trying to split an image that can't be splitted
-[ ] Visualise the quadtree
+# How to run
+
+1. Install the requirements: ```pip3 install -r requirements.txt```
+
+2. Run the code: ```python3 main.py <input_image> -o <outpput_image>``` <br/>
+Example ```python3 main.py test.jpeg -o result.png```
+
+You can set the threshold with the flag *--epsilon*. Other flags are available and listed by running ```python3 main.py --help```.
