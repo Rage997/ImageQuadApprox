@@ -5,16 +5,16 @@ Approximate images using quadtree i.e. by recursively subdividing the image into
 
 1. Install the requirements: ```pip3 install -r requirements.txt```
 
-2. Run the code: ```python3 main.py <input_image> -o <outpput_image>``` <br/>
-Example ```python3 main.py test.jpeg -o result.png``` <br/>
+2. Run the code: ```python3 main.py <input_image> -e <threshold> -o <outpput_image>``` <br/>
+Example ```python3 main.py test.jpeg -e 35 -o result.png``` and the result for different threshold epsilon. <br/>
 
 
 <p float="middle">
   <img src="./test.jpeg" width="250" />
-  <img src="./epsilon20.png" width="250" />
+  <img src="./epsilon50.png" width="250" />
   <br>
   <img src="./epsilon35.png" width="250" />
-  <img src="./epsilon50.png" width="250" />
+  <img src="./epsilon20.png" width="250" />
 </p>
 
 You can set the threshold with the flag *--epsilon*. Other flags are available and listed by running ```python3 main.py --help```.
@@ -22,5 +22,3 @@ You can set the threshold with the flag *--epsilon*. Other flags are available a
 # References
 1. https://estebanhufstedler.com/2020/05/05/image-quadrangulation/
 2. https://ieeexplore.ieee.org/document/544569
-
-#
