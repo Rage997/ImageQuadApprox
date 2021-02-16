@@ -12,6 +12,7 @@ from PIL import Image, ImageDraw
 
 # TODO
 # 1) Output scale (?) -> also max size should be proportional to max recursion
+    # the maximum number of quadrants is 4^n where n is the maximum recursion level
 
 def ensure_square(img):
         '''Ensures that the input image is square. If not, it tries to square it'''

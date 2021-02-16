@@ -20,6 +20,12 @@ Example ```python3 main.py test.jpeg -e 35 -o result.png``` and the result for d
 
 Other parameters are listed by running ```python3 main.py --help```.
 
+# TODO
+I'm interested into implementing other quadtree methods such as:
+
+- [ ] Allow non-square quadrants
+- [ ] Optimise the split of the quadtree (i.e. split quadrants such that the error in the color is minimised)
+- [ ] Animation! Animate the quadtree recursive subidivision
 # References
 1. https://estebanhufstedler.com/2020/05/05/image-quadrangulation/
 2. https://ieeexplore.ieee.org/document/544569
