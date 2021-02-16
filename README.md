@@ -17,7 +17,7 @@ Example ```python3 main.py test.jpeg -e 35 -o result.png``` and the result for d
   <img src="./epsilon20.png" width="250" />
 </p>
 
-You can set the threshold with the flag *--epsilon*. Other flags are available and listed by running ```python3 main.py --help```.
+Other parameters are listed by running ```python3 main.py --help```.
 
 # References
 1. https://estebanhufstedler.com/2020/05/05/image-quadrangulation/
