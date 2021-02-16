@@ -10,11 +10,11 @@ Example ```python3 main.py test.jpeg -o result.png``` <br/>
 
 
 <p float="middle">
-  <img src="./test.jpeg" width="100" />
-  <img src="./test.jpeg" width="100" />
+  <img src="./test.jpeg" width="250" />
+  <img src="./epsilon20.png" width="250" />
   <br>
-  <img src="./test.jpeg" width="100" />
-  <img src="./test.jpeg" width="100" />
+  <img src="./epsilon35.png" width="250" />
+  <img src="./epsilon50.png" width="250" />
 </p>
 
 You can set the threshold with the flag *--epsilon*. Other flags are available and listed by running ```python3 main.py --help```.
