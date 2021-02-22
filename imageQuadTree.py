@@ -8,6 +8,8 @@ References:
 
 import imageio
 import numpy as np
+import math
+from math import ceil
 from PIL import Image, ImageDraw
 
 # TODO
@@ -51,10 +53,11 @@ class ImageQuad:
         # Split the img into 4 quadrants if the distribution of color differs "too much" from mean color
         if self.should_split(x, y, w, h):
             self.recurse_depth += 1
-            self.recursive_draw(x, y, w//2, h//2)
-            self.recursive_draw(x + w//2, y, w//2, h//2)
-            self.recursive_draw(x, y + h//2, w//2, h//2)
-            self.recursive_draw(x + w//2, y + h//2, w/2, h//2)
+
+            self.recursive_draw(x, y, ceil(w/2), ceil(h/2) )
+            self.recursive_draw(min(x + ceil(w/2),self.width), y, ceil(w/2), ceil(h/2) )
+            self.recursive_draw(x, min(y + ceil(h/2), self.height), ceil(w/2), ceil(h/2) )
+            self.recursive_draw(min(x + ceil(w/2),self.width), min(y + ceil(h/2), self.height), ceil(w/2), ceil(h/2) )
             self.recurse_depth -= 1
 
         else: # otherwise draw the quadrant
@@ -84,8 +87,11 @@ class ImageQuad:
     def draw_avg(self, x:int, y:int, w:int, h:int) -> None:
             
         quadrant = self.img[y:y+h,x:x+w]
+        # check if the quadrant is valid
+        if quadrant.size == 0:
+            return
+    
         mean_color = np.mean(quadrant, axis=(0,1), dtype=int)
-        # mean_color = np.append(mean_color, 255)
         if self.draw_outine:
             self.draw.rectangle((x, y, x+w, y+h), 
                             fill=tuple(mean_color),
