@@ -7,7 +7,7 @@ Approximate images using quadtree i.e. by recursively subdividing the image into
 1. Install the requirements: ```pip3 install -r requirements.txt```
 
 2. Run the code: ```python3 main.py <input_image> -e <threshold> -o <outpput_image>``` <br/>
-Example ```python3 main.py test.jpeg -e 35 -o result.png``` and the result for different threshold epsilon. <br/>
+Example ```python3 main.py ./images/test.jpeg -e 35 -o result.png``` and the result for different threshold epsilon. <br/>
 
 
 <p float="middle">
@@ -23,7 +23,7 @@ Other parameters are listed by running ```python3 main.py --help```.
 # TODO
 I'm interested into implementing other quadtree methods such as:
 
-- [ ] Allow non-square quadrants
+- [x] Allow non-square quadrants
 - [ ] Optimise the split of the quadtree (i.e. split quadrants such that the error in the color is minimised)
 - [ ] Animation! Animate the quadtree recursive subidivision
 # References
